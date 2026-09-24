@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 5</title>
+    <style>
+        :root{
+            --bg-color:#333;
+            --text-color:#fff;
+            --hover-text:#ccc;
+            --sbg-color:#f4f4f4;
+            --hover-btn:#555;
+        }
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: white;
+            max-height: 100vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        nav{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+            padding:0.5rem 2rem;
+            text-align: center;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            font-size: 1rem;
+        }
+        nav ul a{
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul a:hover{
+            color: var(--hover-text);
+        }
+        header{
+            background-color: var(--sbg-color);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        header h2{
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        header p{
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--bg-color);
+        }
+        header a{
+            text-decoration: none;
+            border: none;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            transition: background-color 0.3;
+        }
+        header a:hover{
+            background-color: var(--hover-btn);
+        }
+        .skills{
+            padding: 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+        }
+        .skills h2{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .skill-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 1rem;
+            background-color: white;
+        }
+        .skill{
+            background-color: var(--sbg-color);
+            padding: 1rem;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .skill:hover{
+            transform: translateY(-5px);
+        }
+        .projects{
+            padding: 1rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+            background-color: var(--sbg-color);
+        }
+        .project{
+            padding: 1rem;
+            gap: 1rem;
+            text-align: center;
+        }
+        img{
+            height: 200px;
+            object-fit: cover;
+            width: 200px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+            margin-bottom: 1rem;
+        }
+        img:hover{
+            transform: translateY(-5px);
+        }
+        .project h3{
+            font-size: 1.5rem;
+        }
+        footer{
+            background-color: var(--bg-color);
+            padding: 1rem;
+        }
+        .contact{
+            margin: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .form{
+            margin-bottom: 1rem;
+            font-size: 18px;
+        }
+        button{
+            border: none;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
+            transition: background-color 0.3s;
+            width: 100px;
+        }
+        button:hover{
+            background-color: var(--hover-btn);
+        }
+        input{
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid var(--hover-btn);
+        }
+        input:focus{
+            border: 2px solid var(--bg-color);
+        }
+        footer p{
+            transition: color 0.3s;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+        footer p:hover{
+            color: var(--hover-text);
+        }
+        @media (max-width: 768px) {
+            nav{
+                flex-direction: column;
+            }
+            nav ul{
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>LOGO</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h2>Hello, I'm Dipesh</h2>
+        <p>Frontend Developer</p>
+        <a href="#">View Projects</a>
+    </header>
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill-container">
+            <div class="skill">
+                <p>HTML</p></div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">C/C++</div>
+        </div>
+        </section>
+    <section class="projects">
+        <div class="project">
+            <img src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=">
+            <h3>Project 1</h3>
+        </div>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJ4IZbkwwyJD4dq7MObC7x1gpYN0xVkTOV_X9T9ZCMQ&s=10">
+            <h3>Project 2</h3>
+        </div>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSscsu2XjdvSraExo3lHx3cWGwal7zxa5MujrojklYhjY1RY59oU9fKex8&s=10">
+            <h3>Project 3</h3>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="form">
+            <label for="username">Full Name:</label>
+            <input type="text" id="username">
+        </div>
+        <div class="form">
+            <label for="phone">Phone No:</label>
+            <input type="text" id="phone">
+        </div>
+        <div class="form">
+
+            <label for="email">Email: </label>
+            <input type="email" id="email">
+        </div>
+            <button>Submit</button>
+    </section>
+    <footer>
+        <p>Made by Dipesh Chaudhary</p>
+    </footer>
+</body>
+</html>
